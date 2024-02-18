@@ -294,7 +294,10 @@ def create_new_invoice(products):
 
 while True:
     try:
-        #time.sleep(20)
+        if datetime.now() >= datetime(2024, 2, 25):
+            continue
+
+        time.sleep(20)
         product_to_create_invoice = pipeservice.get_data()
 
         if len(product_to_create_invoice) > 0:
